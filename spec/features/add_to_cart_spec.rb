@@ -22,7 +22,7 @@ RSpec.feature "User can add item to the cart", type: :feature, js: true do
     expect(page).to have_button("Add", count: 10)
     
     first(:button, "Add").click
-    save_screenshot
+    # save_screenshot
 
     expect(page).to have_content("My Cart (1)")
   end

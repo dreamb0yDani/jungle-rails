@@ -21,6 +21,6 @@ RSpec.feature "Visitor can navigate to product details", type: :feature, js: tru
     visit root_path
     
     first(".detail-info").click
-    save_screenshot "detail-info.png"
+    # save_screenshot "detail-info.png"
   end
 end
