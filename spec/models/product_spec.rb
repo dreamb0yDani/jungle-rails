@@ -3,7 +3,6 @@ require 'rails_helper'
 RSpec.describe Product, type: :model do
 
   before(:each) do
-    @product = Product.new
     @category = Category.new(name: "Apparel")
   end
 
@@ -34,7 +33,7 @@ RSpec.describe Product, type: :model do
       expect(@product.errors.messages[:name]).to include("can't be blank")
     end
 
-    it "should have prie otherwise invalid" do
+    it "should have price otherwise invalid" do
 
       @product = Product.new(
         name: "shirt",
