@@ -25,6 +25,5 @@ RSpec.feature "User can add item to the cart", type: :feature, js: true do
     save_screenshot
 
     expect(page).to have_content("My Cart (1)")
-    puts page.html
   end
 end
