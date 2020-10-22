@@ -44,6 +44,7 @@ class OrdersController < ApplicationController
 
     enhanced_cart.each do |entry|
       product = entry[:product]
+      # raise product.id.inspect
       quantity = entry[:quantity]
       order.line_items.new(
         product: product,
@@ -53,7 +54,7 @@ class OrdersController < ApplicationController
       )
     end
     order.save!
-    order
+    raise order.inspect
   end
 
 end

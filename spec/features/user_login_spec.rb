@@ -22,7 +22,7 @@ RSpec.feature "User can login if they are registered", type: :feature, js: true 
     fill_in "password", with: @user.password
 
     click_button "Submit"
+
     expect(page).to have_content(@user.first_name)
   end
-
 end
